@@ -9,9 +9,9 @@ const insertionSort = (array, position, arraySteps, colorSteps) => {
 		while (j >= 0 && array[j] > key) {
 			array[j + 1] = array[j];
 			arraySteps.push(array.slice());
-			colorKey[i] = 3;
+			colorKey[i] = 2;
             if ( i === j + 1 ){
-                colorKey[j + 1] = 4;
+                colorKey[j + 1] = 2;
             } else{
                 colorKey[j + 1] = 1;
             }

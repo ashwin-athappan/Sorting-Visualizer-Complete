@@ -1,14 +1,59 @@
 .bar {
-	border-radius: 5px 5px 0 0;
-	width: 25px;
-	margin-left: 10px;
-	margin-right: 10px;
+	height: 200px;
+	width: 2em;
+	margin: 0 1em;
+	transform-style: preserve-3d;
+	transform: rotateX(-20deg) rotateY(-30deg);
+	background-color: rgba(254, 254, 254, 0.25);
+}
+
+.side {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background-color: rgba(254, 254, 254, 0.25);
+}
+
+.back {
+	transform: translateZ(-4px);
+}
+
+.left {
+	transform-origin: left;
+	transform: rotateY(90deg);
+}
+
+.right {
+	transform-origin: right;
+	transform: rotateY(-90deg);
+}
+
+.top {
+	height: 34px;
+	transform-origin: top;
+	transform: rotateX(-90deg);
+	background-color: rgba(254, 254, 254, 0.15);
+}
+
+.bottom {
+	height: 34px;
+	transform-origin: top;
+	background-color: rgba(225, 0, 120, 0.5);
+	box-shadow: 5px 5px 50px 5px rgba(225, 0, 120, 0.2);
+	transition: 0.3s;
+}
+
+.color-bar {
+	background-color: rgba(225, 0, 120, 0.5);
+	box-shadow: 5px 5px 50px 5px rgba(225, 0, 120, 0.2);
+	transition: 0.3s;
 }
 
 .text {
 	text-align: center;
 	transform: rotate(-90deg);
 	font-family: 'mono';
+	height: 25px;
 	outline: none;
 }
 
@@ -16,11 +61,17 @@
 	text-align: center;
 	background: aqua;
 	margin: 1px;
-    cursor: pointer;
+	cursor: pointer;
+	-webkit-touch-callout: none; /* iOS Safari */
+	-webkit-user-select: none; /* Safari */
+	-khtml-user-select: none; /* Konqueror HTML */
+	-moz-user-select: none; /* Old versions of Firefox */
+	-ms-user-select: none; /* Internet Explorer/Edge */
+	user-select: none;
 }
 
 .quantity-button::hover {
-    opacity: 0.5;
+	opacity: 0.5;
 }
 
 input[type='number']::-webkit-inner-spin-button,
